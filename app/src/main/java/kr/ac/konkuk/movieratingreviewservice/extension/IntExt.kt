@@ -1,5 +1,6 @@
 package kr.ac.konkuk.movieratingreviewservice.extension
 
+//K, M으로 숫자가 길어지는 것을 방지
 fun Int.toAbbreviatedString(): String = when (this) {
     in 0..1_000 -> {
         this.toString()

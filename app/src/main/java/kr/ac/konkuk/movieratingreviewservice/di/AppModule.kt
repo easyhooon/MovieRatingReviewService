@@ -12,6 +12,7 @@ import kr.ac.konkuk.movieratingreviewservice.data.repository.MovieRepositoryImpl
 import kr.ac.konkuk.movieratingreviewservice.data.repository.ReviewRepository
 import kr.ac.konkuk.movieratingreviewservice.data.repository.ReviewRepositoryImplementation
 import kr.ac.konkuk.movieratingreviewservice.domain.usecase.GetAllMoviesUseCase
+import kr.ac.konkuk.movieratingreviewservice.domain.usecase.GetAllReviewsUseCase
 import kr.ac.konkuk.movieratingreviewservice.domain.usecase.GetRandomFeaturedMovieUseCase
 import kr.ac.konkuk.movieratingreviewservice.presentation.home.HomeContract
 import kr.ac.konkuk.movieratingreviewservice.presentation.home.HomeFragment
@@ -36,6 +37,7 @@ val dataModule = module {
 val domainModule = module {
     factory { GetRandomFeaturedMovieUseCase(get(), get()) }
     factory { GetAllMoviesUseCase(get()) }
+    factory { GetAllReviewsUseCase(get()) }
 }
 
 val presenterModule = module {

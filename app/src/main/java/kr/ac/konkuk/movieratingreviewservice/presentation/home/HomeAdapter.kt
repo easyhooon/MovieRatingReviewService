@@ -132,6 +132,7 @@ class HomeAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     if (review.userId.isNullOrBlank()) {
                         "🌟 따끈따끈한 후기"
                     } else {
+                        //문자열의 앞의 세글자만 가져옴
                         "- ${review.userId.take(3)}*** -"
                     }
 
