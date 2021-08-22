@@ -5,7 +5,6 @@ import kr.ac.konkuk.movieratingreviewservice.di.appModule
 import kr.ac.konkuk.movieratingreviewservice.di.dataModule
 import kr.ac.konkuk.movieratingreviewservice.di.domainModule
 import kr.ac.konkuk.movieratingreviewservice.di.presenterModule
-import kr.ac.konkuk.movieratingreviewservice.utility.MovieDataGenerator
 import org.koin.android.BuildConfig
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger

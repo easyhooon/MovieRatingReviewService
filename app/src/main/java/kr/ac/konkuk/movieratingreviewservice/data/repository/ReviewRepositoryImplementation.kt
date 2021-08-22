@@ -14,7 +14,22 @@ class ReviewRepositoryImplementation(
         reviewApi.getLatestReview(movieId)
     }
 
-    override suspend fun getAllReviews(movieId: String): List<Review> = withContext(dispatchers) {
-        reviewApi.getAllReviews(movieId)
+    override suspend fun getAllMovieReviews(movieId: String): List<Review> =
+        withContext(dispatchers) {
+            reviewApi.getAllMovieReviews(movieId)
+        }
+
+    override suspend fun getAllUserReviews(userId: String): List<Review> =
+        withContext(dispatchers) {
+            reviewApi.getAllUserReviews(userId)
+        }
+
+    override suspend fun addReview(review: Review): Review = withContext(dispatchers) {
+        reviewApi.addReview(review)
+        //성공했을 때 UI 를 갱신해주기 위해서 리뷰를 반환
+    }
+
+    override suspend fun removeReview(review: Review) = withContext(dispatchers) {
+        reviewApi.removeReview(review)
     }
 }

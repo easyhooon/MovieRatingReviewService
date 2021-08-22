@@ -35,6 +35,11 @@
         android:label="@string/title_movie_reviews"
         tools:layout="@layout/fragment_movie_reviews">
 
+        <argument
+            android:name="movie"
+            app:argType="kr.ac.konkuk.movieratingreviewservice.domain.model.Movie" />
+
+
     </fragment>
 
 </navigation>

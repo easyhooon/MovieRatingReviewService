@@ -1,7 +1,10 @@
 package kr.ac.konkuk.movieratingreviewservice.domain.model
 
+import android.os.Parcelable
 import com.google.firebase.firestore.DocumentId
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Movie(
     //id 는 직접지정할 수 있고, 유니크한 Id 로 자동생성 가능
     //field 값은 아니지만 annotation 을 달아서 toObject 를 하면 id 값이 property 로 들어옴
@@ -23,7 +26,7 @@ data class Movie(
     val numberOfScore: Int? = null,
     val releaseYear: Int? = null,
     val runtime: Int? = null
-)
+)  : Parcelable
 
 // 모든 type 들이 nullable 한 이유:
 // 파이어스토어에서 사용되는 커스텀 객체는 default constructor 가 제공이 되야 함 ( ex) Movie() )
